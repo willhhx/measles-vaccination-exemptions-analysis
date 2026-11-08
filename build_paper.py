@@ -140,11 +140,13 @@ tex = r"""\documentclass[12pt]{article}
 \captionsetup{font=small,labelfont=bf,justification=justified}
 \setstretch{1.15}
 \title{Kindergarten MMR Vaccination, Non-Medical Exemptions, and Measles Cases Across U.S. States, 2024 to 2025: An Ecological Analysis}
-\author{}
+\author{Haoxi Hu\thanks{Corresponding author: \href{mailto:hu.haoxi@northeastern.edu}{hu.haoxi@northeastern.edu}}\\[2pt]
+\small Khoury College of Computer Sciences and Bouv\'e College of Health Sciences,\\
+\small Northeastern University}
 \date{}
 \begin{document}
 \maketitle
-\vspace{-3em}
+\vspace{-2em}
 \begin{abstract}
 """ + esc(abstract) + r"""
 \end{abstract}
@@ -160,10 +162,10 @@ tex = r"""\documentclass[12pt]{article}
 
 \begin{table}[H]
 \centering\small
-\caption{Six jurisdictions with the highest measles case rates, 2024 and 2025 combined. Source: CDC measles surveillance, CDC SchoolVaxView, and U.S. Census Bureau (see text). MMR coverage and non-medical exemption rate are means of school years 2023-24 and 2024-25.}
-\begin{tabular}{lcccc}
+\caption{Six jurisdictions with the highest measles case rates, 2024 and 2025 combined. Source: CDC measles surveillance, CDC SchoolVaxView, and U.S. Census Bureau (see text). Rate is cases per million person-years. MMR is mean kindergarten MMR coverage and Exemption is mean non-medical exemption rate, each averaged over school years 2023-24 and 2024-25.}
+\begin{tabular}{lrrrr}
 \toprule
-Jurisdiction & Cases & Cases per million person-years & Mean MMR coverage (\%) & Mean non-medical exemption (\%) \\
+Jurisdiction & Cases & Rate & MMR (\%) & Exemption (\%) \\
 \midrule
 """ + t1 + r"""\bottomrule
 \end{tabular}
@@ -178,12 +180,14 @@ Jurisdiction & Cases & Cases per million person-years & Mean MMR coverage (\%) &
 \begin{table}[H]
 \centering\footnotesize
 \caption{Associations between kindergarten MMR coverage or non-medical exemption rate and measles cases per million person-years. Spearman $\rho$ with $p$-value; rate ratio (RR) per 1 percentage-point increase with 95\% confidence interval from negative binomial (NB, primary) and Poisson with robust standard errors models. Source: author analysis of CDC and U.S. Census Bureau data.}
-\begin{tabular}{lcccccc}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
 \toprule
 Comparison & $n$ & Spearman $\rho$ & $p$ & NB RR (95\% CI) & Poisson RR (95\% CI) \\
 \midrule
 """ + t2 + r"""\bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \section*{Discussion}

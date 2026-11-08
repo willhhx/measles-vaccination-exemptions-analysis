@@ -5,11 +5,13 @@
 \captionsetup{font=small,labelfont=bf,justification=justified}
 \setstretch{1.15}
 \title{Kindergarten MMR Vaccination, Non-Medical Exemptions, and Measles Cases Across U.S. States, 2024 to 2025: An Ecological Analysis}
-\author{}
+\author{Haoxi Hu\thanks{Corresponding author: \href{mailto:hu.haoxi@northeastern.edu}{hu.haoxi@northeastern.edu}}\\[2pt]
+\small Khoury College of Computer Sciences and Bouv\'e College of Health Sciences,\\
+\small Northeastern University}
 \date{}
 \begin{document}
 \maketitle
-\vspace{-3em}
+\vspace{-2em}
 \begin{abstract}
 Background: Measles spreads easily when vaccination coverage falls below about 95\%, and the United States recorded 2,263 state-reported cases in 2025 after 269 in 2024. We asked whether states with lower kindergarten measles, mumps, and rubella (MMR) vaccination coverage, or higher non-medical exemption rates, reported more measles cases. Methods: We combined public data from the Centers for Disease Control and Prevention (CDC) on kindergarten coverage and exemptions (school years 2023-24 and 2024-25), confirmed measles cases by state (2024 and 2025), and U.S. Census Bureau population estimates. The analysis covered 49 of 51 jurisdictions (50 states and the District of Columbia) and used Spearman rank correlation and negative binomial regression of cases on coverage with a population offset. Results: Lower coverage was moderately associated with higher case rates ($\rho = -0.49$, $p$ < 0.001), as were higher non-medical exemption rates ($\rho = 0.55$, 46 jurisdictions, $p$ < 0.001). In the regression, each 1 percentage-point higher coverage was associated with a rate ratio of 0.90 (95\% CI 0.78 to 1.04), which is compatible with no association; for exemptions the rate ratio was 1.20 (95\% CI 1.01 to 1.42) per point. The association was absent in 2024 ($\rho = -0.05$) and clearer in 2025 ($\rho = -0.49$). Conclusions: State-level kindergarten vaccination indicators were moderately associated with measles case rates, but the evidence from count models was weak and varied by year, and the design cannot show that vaccination status explains the pattern in individuals or communities. Finer-scale data are needed.
 \end{abstract}
@@ -59,10 +61,10 @@ The association differed by year. With 2024 cases, which totaled only 269, the c
 
 \begin{table}[H]
 \centering\small
-\caption{Six jurisdictions with the highest measles case rates, 2024 and 2025 combined. Source: CDC measles surveillance, CDC SchoolVaxView, and U.S. Census Bureau (see text). MMR coverage and non-medical exemption rate are means of school years 2023-24 and 2024-25.}
-\begin{tabular}{lcccc}
+\caption{Six jurisdictions with the highest measles case rates, 2024 and 2025 combined. Source: CDC measles surveillance, CDC SchoolVaxView, and U.S. Census Bureau (see text). Rate is cases per million person-years. MMR is mean kindergarten MMR coverage and Exemption is mean non-medical exemption rate, each averaged over school years 2023-24 and 2024-25.}
+\begin{tabular}{lrrrr}
 \toprule
-Jurisdiction & Cases & Cases per million person-years & Mean MMR coverage (\%) & Mean non-medical exemption (\%) \\
+Jurisdiction & Cases & Rate & MMR (\%) & Exemption (\%) \\
 \midrule
 South Carolina & 334 & 30.2 & 91.7 & 4.3 \\
 Utah & 189 & 26.8 & 88.7 & 9.6 \\
@@ -83,7 +85,8 @@ Kansas & 91 & 15.3 & 90.7 & 3.0 \\
 \begin{table}[H]
 \centering\footnotesize
 \caption{Associations between kindergarten MMR coverage or non-medical exemption rate and measles cases per million person-years. Spearman $\rho$ with $p$-value; rate ratio (RR) per 1 percentage-point increase with 95\% confidence interval from negative binomial (NB, primary) and Poisson with robust standard errors models. Source: author analysis of CDC and U.S. Census Bureau data.}
-\begin{tabular}{lcccccc}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccc}
 \toprule
 Comparison & $n$ & Spearman $\rho$ & $p$ & NB RR (95\% CI) & Poisson RR (95\% CI) \\
 \midrule
@@ -96,7 +99,8 @@ MMR 2023-24 vs.\ 2024 cases & 50 & -0.05 & 0.71 & \multicolumn{2}{c}{not fitted}
 MMR 2024-25 vs.\ 2025 cases & 49 & -0.49 & $<$0.001 & \multicolumn{2}{c}{not fitted} \\
 MMR 2025-26 vs.\ 2026 cases (partial) & 49 & -0.29 & 0.045 & \multicolumn{2}{c}{not fitted} \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \end{table}
 
 \section*{Discussion}
